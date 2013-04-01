@@ -64,6 +64,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'vim-pandoc/vim-pandoc'
 
+
 " Git Repos not on GitHub
 "Bundle 'git://git.wincent.com/command-t.git'
 
@@ -81,6 +82,7 @@ au BufNewFile * set fileformat=unix
 filetype plugin indent on
 set autoindent
 set smartindent
+set mouse=a
 
 " Tabs converted to 4 spaces
 set shiftwidth=4
@@ -363,8 +365,8 @@ let g:vimclojure#ParenRainbow = 1
 "command -range AlignFirstColon  :<line1>,<line2>Tabularize /^[^:]*\zs/
 
 " Bundle 'scrooloose/nerdtree'
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+"let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+"map <Leader>n :NERDTreeToggle<CR>
 
 " Bundle 'mileszs/ack.vim'
 nmap <Leader>a <Esc>:Ack!<space>
@@ -434,3 +436,13 @@ endif
 unlet vimrc_local
 
 " vim: filetype=vim
+
+"configure ctrlp
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
+nnoremap ; :
+nnoremap : ;
+Bundle 'slim-template/vim-slim'
