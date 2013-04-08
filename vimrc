@@ -28,6 +28,7 @@ Bundle 'gmarik/vundle'
 Bundle 'VimClojure'
 Bundle 'paredit.vim'
 
+Bundle 'kchmck/vim-coffee-script'
 " Git Repos on GitHub
 " Inspired from http://sontek.net/turning-vim-into-a-modern-python-ide
 "Bundle 'AD7six/vim-independence'
@@ -79,7 +80,7 @@ au BufNewFile * set fileformat=unix
 
 " Automatically indent when adding a curly bracket, etc.
 " required! by vundle
-filetype plugin indent on
+"filetype plugin indent on
 set autoindent
 set smartindent
 set mouse=a
@@ -446,3 +447,11 @@ let g:ctrlp_prompt_mappings = {
 nnoremap ; :
 nnoremap : ;
 Bundle 'slim-template/vim-slim'
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
